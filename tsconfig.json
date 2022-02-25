@@ -1,0 +1,14 @@
+{
+  "ts-node": {
+    "files": true
+  },
+  "compilerOptions": {
+    "outDir": "build",
+    "rootDir": "src",
+    "esModuleInterop": true,
+    "useUnknownInCatchVariables": false,
+  },
+  "exclude": [
+    "build"
+  ]
+}
