@@ -36,13 +36,11 @@ export function createIntentHandler({ secret }: { secret: string }) {
     const challenge = request.query['hub.challenge']
     const requestSecret = request.query['hub.secret']
     if (requestSecret !== secret) {
-      console.log(requestSecret, secret)
       return response.status(400).send('Missing/invaild secret')
     }
     if (challenge) {
       return response.status(200).send(challenge)
     }
-    console.log('test')
     return response.status(400).send()
   }
 }
