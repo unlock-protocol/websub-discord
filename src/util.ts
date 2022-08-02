@@ -159,4 +159,35 @@ export const networks: Record<string, Network> = {
       },
     },
   },
+  '5': {
+    id: 5,
+    name: 'Goerli (Testnet)',
+    explorer: {
+      name: 'Goerli (Testnet)',
+      urls: {
+        address: (address) => `https://goerli.etherscan.io/address/${address}`,
+      },
+    },
+  },
+  '80001': {
+    id: 80001,
+    name: 'Mumbai (Polygon)',
+    explorer: {
+      name: 'PolygonScan (Mumbai)',
+      urls: {
+        address: (address) =>
+          `https://mumbai.polygonscan.com/address/${address}`,
+      },
+    },
+  },
+  '42220': {
+    id: 42220,
+    name: 'Celo',
+    explorer: {
+      name: 'Celoscan',
+      urls: {
+        address: (address) => `https://celoscan.io/address/${address}`,
+      },
+    },
+  },
 }
