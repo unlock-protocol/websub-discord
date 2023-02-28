@@ -1,7 +1,8 @@
 import { WebhookClient, MessageEmbed } from 'discord.js'
 import express from 'express'
 import { config } from './config'
-import { chunk, NETWORK_COLOR, networks, websubRequest, wait } from './util'
+import { chunk, websubRequest, wait, NETWORK_COLOR } from './util'
+import networks from '@unlock-protocol/networks'
 import { createIntentHandler, createWebsubMiddleware } from './middleware'
 
 const port = process.env.PORT || 4000
@@ -35,7 +36,7 @@ app.use(express.json())
 app.get('/callback/locks', intentHandler)
 app.get('/callback/keys', intentHandler)
 
-app.post('/callback/locks', websubMiddleware, async (req) => {
+app.post('/callback/locks', websubMiddleware, async req => {
   const embeds: MessageEmbed[] = []
   const locks: any[] = req.body?.data
   const network = networks[req.body?.network]
@@ -74,7 +75,7 @@ app.post('/callback/locks', websubMiddleware, async (req) => {
   }
 })
 
-app.post('/callback/keys', websubMiddleware, async (req) => {
+app.post('/callback/keys', websubMiddleware, async req => {
   const embeds: MessageEmbed[] = []
   const keys: any[] = req.body?.data
   const network = networks[req.body?.network]
@@ -113,7 +114,7 @@ app.post('/callback/keys', websubMiddleware, async (req) => {
 })
 
 async function subscribeHooks() {
-  const subscribe = Object.values(networks).map(async (network) => {
+  const subscribe = Object.values(networks).map(async (network: any) => {
     try {
       const locksEndpoint = new URL(
         `/api/hooks/${network.id}/locks`,
@@ -151,7 +152,7 @@ async function subscribeHooks() {
 }
 
 async function unsubscribeHooks() {
-  const unsubscribe = Object.values(networks).map(async (network) => {
+  const unsubscribe = Object.values(networks).map(async (network: any) => {
     try {
       const locksEndpoint = new URL(
         `/api/hooks/${network.id}/locks`,
