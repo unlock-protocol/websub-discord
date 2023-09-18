@@ -115,10 +115,10 @@
   dependencies:
     "@types/node" "*"
 
-"@unlock-protocol/networks@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@unlock-protocol/networks/-/networks-0.0.10.tgz#eeb17bbd78052664bec9596e67415a65202c5680"
-  integrity sha512-n3EFvRVIfl3R78bfNsWpdBedDJdBwzbul7RnRl4rKtXqRCqn/DY10zeO9VixrDCCcKed8Ft03YGFS2u1bqS2wQ==
+"@unlock-protocol/networks@^0.0.16":
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/@unlock-protocol/networks/-/networks-0.0.16.tgz#770cfbd5007263f8d51ae0b35de76d76e6846967"
+  integrity sha512-rhqUm6Ib4Mh8Lhn/T8TqR4pjGej0YkvwytL5XI7keOm3Pog5xOrAQX20z3097dOZxkAXltlkrusTa5aiASKH+g==
 
 "@unlock-protocol/types@^0.0.7":
   version "0.0.7"
