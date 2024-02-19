@@ -100,6 +100,8 @@ app.post('/callback/keys', websubMiddleware, async req => {
       const networkColor = NETWORK_COLOR[network.id]
       if (networkColor) {
         embed.setColor(networkColor)
+      } else {
+        embed.setColor(stringToColour(network.name))
       }
     }
 
