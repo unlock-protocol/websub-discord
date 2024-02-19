@@ -1,7 +1,7 @@
 import { WebhookClient, MessageEmbed } from 'discord.js'
 import express from 'express'
 import { config } from './config'
-import { chunk, websubRequest, wait, NETWORK_COLOR } from './util'
+import { chunk, websubRequest, wait, NETWORK_COLOR, stringToColour } from './util'
 import networks from '@unlock-protocol/networks'
 import { createIntentHandler, createWebsubMiddleware } from './middleware'
 
@@ -60,6 +60,8 @@ app.post('/callback/locks', websubMiddleware, async req => {
       const networkColor = NETWORK_COLOR[network.id]
       if (networkColor) {
         embed.setColor(networkColor)
+      } else {
+        embed.setColor(stringToColour(network.name))
       }
     }
 
