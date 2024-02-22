@@ -252,10 +252,10 @@
   dependencies:
     "@types/node" "*"
 
-"@unlock-protocol/networks@^0.0.20":
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/@unlock-protocol/networks/-/networks-0.0.20.tgz#35d1cda362d8dbb633e66086902f117c5f032b3a"
-  integrity sha512-/0xcLqYb+3FQ6BuAWjRbp8cwR772NAR7k8y6fLEnEoLA3HqUQLqsWb7MQroF0w+FZdGxdv+P+SjDZyxMv0j0tg==
+"@unlock-protocol/networks@^0.0.21":
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/@unlock-protocol/networks/-/networks-0.0.21.tgz#77f0afa118872dc4926e0808814fb445ac325c31"
+  integrity sha512-5fQ7apUuJRgLDUWtd+EVQ3dGV3lE9LJSDPlvegVRyO4udecjEcxOTf89Ds7NT02HWBlYmCGRdR3zs0KKhhP4WQ==
   dependencies:
     eslint-plugin-sort-keys-fix "1.1.2"
     ethers "6.9.2"

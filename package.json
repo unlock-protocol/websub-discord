@@ -1,7 +1,7 @@
 {
   "name": "websub-discord",
   "dependencies": {
-    "@unlock-protocol/networks": "^0.0.20",
+    "@unlock-protocol/networks": "^0.0.21",
     "@unlock-protocol/types": "^0.0.7",
     "cross-fetch": "^3.1.5",
     "discord.js": "^13.6.0",
