@@ -121,6 +121,7 @@ async function subscribeHooks() {
   const networkIds = Object.keys(networks)
   for (let i=0; i<networkIds.length; i++) {
     const network = networks[networkIds[i]]
+    console.log(`Subscribing to network: ${network.name}`)
     try {
       const locksEndpoint = new URL(
         `/api/hooks/${network.id}/locks`,
