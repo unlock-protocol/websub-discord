@@ -118,7 +118,9 @@ app.post('/callback/keys', websubMiddleware, async req => {
 })
 
 async function subscribeHooks() {
-  const subscribe = Object.values(networks).map(async (network: any) => {
+  const networkIds = Object.keys(networks)
+  for (let i=0; i<networkIds.length; i++) {
+    const network = networks[networkIds[i]]
     try {
       const locksEndpoint = new URL(
         `/api/hooks/${network.id}/locks`,
@@ -150,9 +152,8 @@ async function subscribeHooks() {
     } catch (error) {
       console.error(error.message)
     }
-  })
+  }
 
-  await Promise.all(subscribe)
 }
 
 async function unsubscribeHooks() {
